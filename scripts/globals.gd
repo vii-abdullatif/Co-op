@@ -32,8 +32,8 @@ func switch_to_scene(path:String):
 		current.add_child(instance)
 
 # Remove minigame scene
-func end_minigame(name:String):
+func end_minigame(scene_name:String):
 	# Confirm and remove :P
 	var current = get_tree().current_scene
-	if current.has_node(name):
-		current.get_node(name).queue_free()
+	if current.has_node(scene_name):
+		current.get_node(scene_name).queue_free()

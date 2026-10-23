@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://bbnh2mjs62eis"]
+
+[ext_resource type="Script" uid="uid://2bchb23n24lr" path="res://scenes/tictactoe/normal.gd" id="1_7e3lt"]
+[ext_resource type="Texture2D" uid="uid://bcxau51qre2d8" path="res://assets/bg_expanded.png" id="1_bd064"]
+[ext_resource type="Texture2D" uid="uid://c8yde1xlmaid0" path="res://assets/x-tic.png" id="2_7e3lt"]
+[ext_resource type="Texture2D" uid="uid://2mckrg0vctfs" path="res://assets/o.png" id="3_q0egu"]
+[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="5_q0egu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fl31c"]
+font = ExtResource("5_q0egu")
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8t61q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfrx5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxr7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57kle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1epdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pyry"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e3lt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxae3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epcrr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ft05g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1emcd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0egu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fl31c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epvp8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yhqe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 16
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du5l4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epvp8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yhqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_du5l4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d5wug"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jg2sw"]
+
+[node name="Normal" type="Control" unique_id=1482953940]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7e3lt")
+
+[node name="canvas" type="CanvasLayer" parent="." unique_id=1656469774]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="canvas" unique_id=991345710]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bd064")
+
+[node name="X" type="TextureRect" parent="canvas" unique_id=1253411677]
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_7e3lt")
+
+[node name="O" type="TextureRect" parent="canvas" unique_id=1378562022]
+offset_left = 1159.0
+offset_top = 599.0
+offset_right = 1199.0
+offset_bottom = 639.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_q0egu")
+
+[node name="score" type="Label" parent="." unique_id=1425565896]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 40.0
+offset_right = 1224.0
+offset_bottom = 118.0
+size_flags_horizontal = 4
+text = "12 VS 1"
+label_settings = SubResource("LabelSettings_fl31c")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=251819775]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 240.0
+offset_top = 60.0
+offset_right = 1040.0
+offset_bottom = 660.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=804209377]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8t61q")
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer" unique_id=814725210]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="11" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1266533101]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nxr7c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_57kle")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1epdk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4pyry")
+
+[node name="12" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1974843829]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_7e3lt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="13" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=822907111]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0egu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="21" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1193012296]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="22" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1303510400]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="23" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=561934039]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_fl31c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="31" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1836883732]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_epvp8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="32" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=223467405]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_2yhqe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="34" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=526435127]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_du5l4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
+
+[node name="restart" type="Button" parent="." unique_id=1670899640]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 640.0
+offset_right = 254.0
+offset_bottom = 720.0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.7764706, 0.16862746, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9019608, 0.20392157, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.40317222, 0.27591887, 1)
+theme_override_colors/font_hover_color = Color(0.9019608, 0.20392157, 0, 1)
+theme_override_fonts/font = ExtResource("5_q0egu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_epvp8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2yhqe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_du5l4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d5wug")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jg2sw")
+text = "RESTART"
