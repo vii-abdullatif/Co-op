@@ -15,6 +15,10 @@ run/main_scene="uid://d6dypkxg6rp4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/icon.png"
 
+[autoload]
+
+Globals="*uid://bkxyujukgano2"
+
 [display]
 
 window/size/viewport_width=1280
@@ -25,6 +29,14 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "red",
+"res://scenes/": "orange"
+}
 
 [input]
 
