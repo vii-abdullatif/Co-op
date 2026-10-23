@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bp5wavej2q27b" path="res://assets/Dungeon tileset/Dungeon tileset.png" id="1_7h61r"]
 [ext_resource type="Texture2D" uid="uid://cyev0p8o206w2" path="res://assets/MiniTileset-Dungeon/Dungeon.png" id="2_0sr1o"]
 [ext_resource type="PackedScene" uid="uid://cim80q8cwlyab" path="res://scenes/players/player_1/player_1.tscn" id="3_0sr1o"]
+[ext_resource type="PackedScene" uid="uid://dwmlsmiaqejwj" path="res://scenes/players/player_2/player_2.tscn" id="4_kelw5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kelw5"]
 texture = ExtResource("1_7h61r")
@@ -584,3 +585,7 @@ shape = SubResource("RectangleShape2D_kelw5")
 [node name="Player1" parent="." unique_id=1844242912 instance=ExtResource("3_0sr1o")]
 position = Vector2(189, 122)
 scale = Vector2(3.839996, 3.839996)
+
+[node name="Player2" parent="." unique_id=1798007415 instance=ExtResource("4_kelw5")]
+position = Vector2(308, 109.00001)
+scale = Vector2(4.3599997, 4.3599997)
