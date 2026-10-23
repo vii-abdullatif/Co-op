@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d6dypkxg6rp4"]
 
 [ext_resource type="Texture2D" uid="uid://dalev3lrmltw1" path="res://assets/bg.png" id="1_0ebjn"]
+[ext_resource type="Script" uid="uid://bftm846bx02a2" path="res://scenes/main_menu/main_menu.gd" id="1_ob46e"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="2_ob46e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nfrx5"]
@@ -121,6 +122,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ob46e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=916553912]
 layer = -1
