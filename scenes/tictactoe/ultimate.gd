@@ -5,7 +5,6 @@ const mini_scene = preload("res://scenes/tictactoe/base.tscn")
 
 # Dimensions of base.tscn
 const design_size = Vector2(800,600)
-const mini_cell_size = Vector2(800,600) / 3.5
 
 # Main Grid, score and canvases
 @onready var grid = $GridContainer
@@ -45,8 +44,11 @@ func _ready():
 		var mini_instantiate = mini_scene.instantiate()
 		slot.add_child(mini_instantiate)
 		mini_instantiate.name = "mini"
+		# Used claude for assistance with diemsnions and scaling management
 		mini_instantiate.size = design_size
-		mini_instantiate.scale = (design_size/3)/design_size
+		mini_instantiate.scale = Vector2(0.3,0.3)
+		mini_instantiate.position = Vector2(13,10)
+		
 		mini_instantiate.auto_restart = true
 		mini_instantiate.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		
