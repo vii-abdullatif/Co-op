@@ -1,20 +1,22 @@
 extends Control
 
 const mini_scene = preload("res://scenes/tictactoe/base.tscn")
-const mini_cell_size = Vector2(300,200)
-const design_size = Vector2(1280,720)
+const design_size = Vector2(800,600)
+const mini_cell_size = Vector2(800,600) / 3.5
 
 @onready var grid = $GridContainer
 @onready var score = $score
 @onready var mini_indicator = $miniIndicator
-
+@onready var x = $canvas/X
+@onready var o = $canvas/O
 var textures = {
 	"x":load("res://assets/x-tic.png"),
 	"o":load("res://assets/o.png")
 }
 
 var big_board:Array[String] = []
-
+var x_score := 0
+var o_score := 0
 var active_cell = -1
 var picker = "x"
 var mini_first = "o"
@@ -30,7 +32,7 @@ func _ready():
 		slot.add_child(mini_instantiate)
 		mini_instantiate.name = "mini"
 		mini_instantiate.size = design_size
-		mini_instantiate.scale = mini_cell_size / design_size
+		mini_instantiate.scale = (design_size/3)/design_size
 		mini_instantiate.auto_restart = true
 		mini_instantiate.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		
@@ -55,9 +57,14 @@ func _on_mini_finished(result:String):
 	mini.hide()
 	mini.set_locked(true)
 	active_cell = -1
-	
-	if tictactoeLogic.check_result(big_board) != "":
+	var big_result = tictactoeLogic.check_result(big_board)
+	if big_result != "":
 		game_done = true
+		if big_result == "x":
+			x_score += 1
+		elif big_result == "o":
+			o_score+=1
+		new_match()
 	else:
 		picker = flip_turn(picker)
 	update_ui()
@@ -106,4 +113,10 @@ func flip_turn(p:String)->String:
 
 func _on_mini_turn_changed(new_turn:String):
 	mini_turn = new_turn
+	x.visible = mini_turn == "x"
+	o.visible = mini_turn == "o"
 	update_ui()
+
+
+func _process(_delta:float):
+	$score.text = str(x_score) + " VS " + str(o_score)

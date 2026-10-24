@@ -6,12 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://2mckrg0vctfs" path="res://assets/o.png" id="3_yt63u"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="4_fn5eq"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_0s8uj"]
-font = ExtResource("4_fn5eq")
-font_size = 32
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_yt63u"]
 font = ExtResource("4_fn5eq")
 font_size = 48
@@ -243,19 +237,6 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_utdms")
 
-[node name="miniIndicator" type="Label" parent="." unique_id=1441945193]
-visible = false
-layout_mode = 0
-offset_left = 11.0
-offset_top = 568.0
-offset_right = 251.0
-offset_bottom = 646.0
-size_flags_horizontal = 4
-text = "MINI CELL"
-label_settings = SubResource("LabelSettings_0s8uj")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1951294876]
 layer = -1
 
@@ -286,7 +267,7 @@ offset_top = 40.0
 offset_right = 1224.0
 offset_bottom = 118.0
 size_flags_horizontal = 4
-text = "12 VS 1"
+text = "0 VS 0"
 label_settings = SubResource("LabelSettings_yt63u")
 horizontal_alignment = 1
 
