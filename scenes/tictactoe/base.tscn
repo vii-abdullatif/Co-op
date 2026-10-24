@@ -223,6 +223,7 @@ border_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6unqh"]
 
 [node name="Base" type="Control" unique_id=1726152457]
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
