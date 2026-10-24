@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://didukcdefwq81" path="res://scenes/football_header_minigame/football_background.tscn" id="1_stcog"]
 [ext_resource type="PackedScene" uid="uid://dley6h5w2dai7" path="res://scenes/football_header_minigame/player.tscn" id="2_1vg24"]
+[ext_resource type="PackedScene" uid="uid://cdlv0j5u3siyy" path="res://scenes/football_header_minigame/football.tscn" id="3_15rkw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onkbk"]
 size = Vector2(1305, 20)
@@ -15,9 +16,10 @@ size = Vector2(1305, 20)
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=1782744524]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=76918324]
-position = Vector2(630.5, 537)
+position = Vector2(631, 576)
 shape = SubResource("RectangleShape2D_onkbk")
 
 [node name="Player" parent="." unique_id=1023657894 instance=ExtResource("2_1vg24")]
-position = Vector2(580, 425)
-scale = Vector2(2.5, 2.5)
+
+[node name="Football" parent="." unique_id=924431815 instance=ExtResource("3_15rkw")]
+position = Vector2(480, 455)
