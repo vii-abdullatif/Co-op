@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cc6gx6j7nnbuv"]
 
-[ext_resource type="Texture2D" uid="uid://di7u2ihsn44iy" path="res://assets/int.png" id="1_0y6le"]
-[ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="1_c7utq"]
-[ext_resource type="Texture2D" uid="uid://b4h1xd32i01xw" path="res://assets/derx.png" id="2_j1u1h"]
-[ext_resource type="Texture2D" uid="uid://inysc4ivj5lm" path="res://assets/dery.png" id="3_bhv4x"]
-[ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="5_hh5br"]
-[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="6_cubwl"]
+[ext_resource type="Texture2D" uid="uid://di7u2ihsn44iy" path="res://assets/int.png" id="1_k53ik"]
+[ext_resource type="Texture2D" uid="uid://b4h1xd32i01xw" path="res://assets/derx.png" id="2_fvubd"]
+[ext_resource type="Texture2D" uid="uid://inysc4ivj5lm" path="res://assets/dery.png" id="3_ak4ib"]
+[ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="4_g17kg"]
+[ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="5_xfhnx"]
+[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="6_gojsa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pv7d"]
-atlas = ExtResource("1_0y6le")
+atlas = ExtResource("1_k53ik")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ad53y"]
@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3b5jt"]
-atlas = ExtResource("2_j1u1h")
+atlas = ExtResource("2_fvubd")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrd15"]
@@ -38,7 +38,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1y0r"]
-atlas = ExtResource("3_bhv4x")
+atlas = ExtResource("3_ak4ib")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oyp6x"]
@@ -53,7 +53,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehfgi"]
-atlas = ExtResource("1_c7utq")
+atlas = ExtResource("4_g17kg")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04fvh"]
-atlas = ExtResource("5_hh5br")
+atlas = ExtResource("5_xfhnx")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2nnk"]
@@ -90,6 +90,10 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.3058544, 0.8078344, 0.58208257, 1)
 border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7rlf"]
 bg_color = Color(0.6, 0.8901961, 0.9372549, 1)
@@ -99,6 +103,10 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.8, 0.39607844, 0.8, 1)
 border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 shadow_size = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cvp5"]
@@ -109,6 +117,23 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.98995894, 0.5753155, 0.6821544, 1)
 border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utshk"]
+bg_color = Color(0.6, 0.3254902, 0.6, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.4862745, 0.14901961, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="math menu" type="Control" unique_id=1362395360]
 layout_mode = 3
@@ -127,9 +152,9 @@ offset_bottom = 723.0
 color = Color(0.4104027, 0.26359957, 0.56038946, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1137666078]
-position = Vector2(645.99994, 198.99997)
+position = Vector2(612.9154, 254.2529)
 rotation = -0.24587376
-scale = Vector2(9.194831, 9.194831)
+scale = Vector2(12.040974, 12.040974)
 sprite_frames = SubResource("SpriteFrames_ad53y")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=933690512]
@@ -151,7 +176,7 @@ scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1749278150]
-position = Vector2(1190, 112.00001)
+position = Vector2(948, 94.99999)
 rotation = 0.22460917
 scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_t2nnk")
@@ -163,14 +188,21 @@ offset_top = 524.0
 offset_right = 592.0
 offset_bottom = 646.0
 rotation = -0.1623724
-theme_override_fonts/font = ExtResource("6_cubwl")
+theme_override_fonts/font = ExtResource("6_gojsa")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_s7wsd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s7rlf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0cvp5")
 text = "Play"
 
-[node name="back" type="Button" parent="." unique_id=384105168]
+[node name="Button" type="Button" parent="." unique_id=1568837203]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 712.0
+offset_top = 544.0
+offset_right = 1066.0
+offset_bottom = 656.0
+rotation = 0.1256457
+theme_override_fonts/font = ExtResource("6_gojsa")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_utshk")
+text = "Back"
