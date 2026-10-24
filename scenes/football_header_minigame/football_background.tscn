@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://didukcdefwq81"]
+
+[ext_resource type="Texture2D" uid="uid://b8pqiq3wajc5n" path="res://assets/FootballHeader/HeadingBallBackground.png" id="1_kjyk1"]
+[ext_resource type="Texture2D" uid="uid://0y176mlgc5y4" path="res://assets/bath_duck_race/football.png" id="2_jg8ta"]
+
+[node name="Background" type="Node2D" unique_id=1698591567]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=763171765]
+scale = Vector2(2, 2)
+texture = ExtResource("1_kjyk1")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=677131323]
+position = Vector2(250, 206)
+rotation = -3.1415927
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_jg8ta")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1708001050]
+position = Vector2(380, 205)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_jg8ta")
