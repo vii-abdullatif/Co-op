@@ -149,6 +149,9 @@ _data = {
 &"pre_kick": SubResource("Animation_mybin")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_onkbk"]
+radius = 5.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1023657894]
 script = ExtResource("1_1k3ea")
 
@@ -171,3 +174,20 @@ libraries/ = SubResource("AnimationLibrary_hemv7")
 position = Vector2(0, -6)
 texture = ExtResource("3_hemv7")
 script = ExtResource("4_flb3u")
+
+[node name="HeadHitbox" type="Area2D" parent="." unique_id=659559161]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadHitbox" unique_id=1179505011]
+position = Vector2(3, -24)
+shape = SubResource("CircleShape2D_onkbk")
+debug_color = Color(0.9957246, 0, 0.20829695, 0.41960785)
+
+[node name="KickHitbox" type="Area2D" parent="." unique_id=1628157861]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KickHitbox" unique_id=36056529]
+position = Vector2(8, -4)
+shape = SubResource("CircleShape2D_onkbk")
+debug_color = Color(0.9957246, 0, 0.20829695, 0.41960785)
+
+[connection signal="body_entered" from="HeadHitbox" to="." method="_on_head_hitbox_body_entered"]
+[connection signal="body_entered" from="KickHitbox" to="." method="_on_kick_hitbox_body_entered"]

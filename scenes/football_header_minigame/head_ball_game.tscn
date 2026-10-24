@@ -3,9 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://didukcdefwq81" path="res://scenes/football_header_minigame/football_background.tscn" id="1_stcog"]
 [ext_resource type="PackedScene" uid="uid://dley6h5w2dai7" path="res://scenes/football_header_minigame/player.tscn" id="2_1vg24"]
 [ext_resource type="PackedScene" uid="uid://cdlv0j5u3siyy" path="res://scenes/football_header_minigame/football.tscn" id="3_15rkw"]
+[ext_resource type="Texture2D" uid="uid://cvfwg0d1jfxd6" path="res://assets/FootballHeader/characters/soccer-player-2.png" id="4_w5kjm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onkbk"]
 size = Vector2(1305, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kaadr"]
+size = Vector2(791, 33)
 
 [node name="HeadBallGame" type="Node2D" unique_id=410145324]
 
@@ -19,9 +23,52 @@ size = Vector2(1305, 20)
 position = Vector2(631, 576)
 shape = SubResource("RectangleShape2D_onkbk")
 
-[node name="Player" parent="." unique_id=1023657894 instance=ExtResource("2_1vg24")]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1570105929]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D2" unique_id=183547079]
+polygon = PackedVector2Array(246, 329, 114, 350, 71, 383, 7, 560, 170, 563, 170, 385)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=293432626]
+position = Vector2(1283, -3)
+scale = Vector2(-1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D3" unique_id=512627090]
+polygon = PackedVector2Array(246, 329, 114, 350, 71, 383, 7, 560, 170, 563, 170, 385)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1688829572]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D4" unique_id=1915076788]
+polygon = PackedVector2Array(108, 350, 244, 328, 248, 0, -1, 0, -2, 563, 64, 379)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Borders" unique_id=2055946165]
+position = Vector2(1280, -3)
+scale = Vector2(-1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D5" unique_id=872704175]
+polygon = PackedVector2Array(108, 350, 244, 328, 248, 0, -1, 0, -2, 563, 64, 379)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Borders" unique_id=729174754]
+position = Vector2(991, -71)
+scale = Vector2(-1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D6" unique_id=125114211]
+position = Vector2(350.5, 87.5)
+shape = SubResource("RectangleShape2D_kaadr")
+
+[node name="Player_1" parent="." unique_id=1023657894 instance=ExtResource("2_1vg24")]
 position = Vector2(296, 557.00006)
-scale = Vector2(5, 5)
+scale = Vector2(4.5, 4.5)
+player_ind = 1
 
 [node name="Football" parent="." unique_id=924431815 instance=ExtResource("3_15rkw")]
 position = Vector2(480, 455)
+
+[node name="Player_2" parent="." unique_id=10899221 instance=ExtResource("2_1vg24")]
+position = Vector2(973, 555)
+scale = Vector2(-4.5, 4.5)
+player_ind = 2
+
+[node name="Sprite2D" parent="Player_2" index="0" unique_id=1061987961]
+texture = ExtResource("4_w5kjm")
+
+[editable path="Player_2"]
