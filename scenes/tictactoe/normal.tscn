@@ -1,238 +1,17 @@
 [gd_scene format=3 uid="uid://bbnh2mjs62eis"]
 
-[ext_resource type="Script" uid="uid://2bchb23n24lr" path="res://scenes/tictactoe/normal.gd" id="1_7e3lt"]
+[ext_resource type="Script" uid="uid://ihq5gvn2ptlk" path="res://scenes/tictactoe/normal.gd" id="1_7e3lt"]
 [ext_resource type="Texture2D" uid="uid://bcxau51qre2d8" path="res://assets/bg_expanded.png" id="1_bd064"]
 [ext_resource type="Texture2D" uid="uid://c8yde1xlmaid0" path="res://assets/x-tic.png" id="2_7e3lt"]
 [ext_resource type="Texture2D" uid="uid://2mckrg0vctfs" path="res://assets/o.png" id="3_q0egu"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="5_q0egu"]
+[ext_resource type="PackedScene" uid="uid://ba81dhf3gyhdp" path="res://scenes/tictactoe/base.tscn" id="6_fl31c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fl31c"]
 font = ExtResource("5_q0egu")
 font_size = 48
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8t61q"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfrx5"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixmrv"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7yuc"]
-bg_color = Color(0, 0, 0, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74rie"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7fat"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e3lt"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxr7c"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57kle"]
-bg_color = Color(0, 0, 0, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pyry"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1emcd"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0egu"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft05g"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epcrr"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxae3"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl380"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkpgs"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv0aq"]
-bg_color = Color(0, 0, 0, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05t70"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjkj4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kfrj"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg2sw"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5wug"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1epdk"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fl31c"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd0wq"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpeq4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0nyo"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmxd1"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_bottom = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epvp8"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngojn"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wuya"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5ui4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_laa77"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yhqe"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8gbc"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0osg"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rra0p"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deffo"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_right = 16
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du5l4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxae3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epcrr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ft05g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1emcd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epvp8"]
 
@@ -265,6 +44,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_7e3lt")
 
 [node name="O" type="TextureRect" parent="canvas" unique_id=1378562022]
+visible = false
 offset_left = 1159.0
 offset_top = 599.0
 offset_right = 1199.0
@@ -279,153 +59,9 @@ offset_top = 40.0
 offset_right = 1224.0
 offset_bottom = 118.0
 size_flags_horizontal = 4
-text = "12 VS 1"
+text = "0 VS 0"
 label_settings = SubResource("LabelSettings_fl31c")
 horizontal_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=251819775]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 240.0
-offset_top = 60.0
-offset_right = 1040.0
-offset_bottom = 660.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
-
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=804209377]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8t61q")
-
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer" unique_id=814725210]
-layout_mode = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-columns = 3
-
-[node name="0" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1266533101]
-texture_filter = 1
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ixmrv")
-theme_override_styles/hover = SubResource("StyleBoxFlat_f7yuc")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_74rie")
-theme_override_styles/focus = SubResource("StyleBoxFlat_i7fat")
-icon_alignment = 1
-expand_icon = true
-
-[node name="1" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1974843829]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_7e3lt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nxr7c")
-theme_override_styles/hover = SubResource("StyleBoxFlat_57kle")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_4pyry")
-theme_override_styles/focus = SubResource("StyleBoxFlat_1emcd")
-icon_alignment = 1
-expand_icon = true
-
-[node name="2" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=822907111]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_q0egu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ft05g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_epcrr")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_hxae3")
-theme_override_styles/focus = SubResource("StyleBoxFlat_sl380")
-icon_alignment = 1
-expand_icon = true
-
-[node name="3" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1193012296]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bkpgs")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xv0aq")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_05t70")
-theme_override_styles/focus = SubResource("StyleBoxFlat_wjkj4")
-icon_alignment = 1
-expand_icon = true
-
-[node name="4" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1303510400]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_nfrx5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2kfrj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jg2sw")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_d5wug")
-theme_override_styles/focus = SubResource("StyleBoxFlat_1epdk")
-icon_alignment = 1
-expand_icon = true
-
-[node name="5" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=561934039]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_fl31c")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gd0wq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kpeq4")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_r0nyo")
-theme_override_styles/focus = SubResource("StyleBoxFlat_vmxd1")
-icon_alignment = 1
-expand_icon = true
-
-[node name="6" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=1836883732]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_epvp8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ngojn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7wuya")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_o5ui4")
-theme_override_styles/focus = SubResource("StyleBoxFlat_laa77")
-icon_alignment = 1
-expand_icon = true
-
-[node name="7" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=223467405]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_2yhqe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_f8gbc")
-theme_override_styles/hover = SubResource("StyleBoxFlat_b0osg")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_rra0p")
-theme_override_styles/focus = SubResource("StyleBoxFlat_deffo")
-icon_alignment = 1
-expand_icon = true
-
-[node name="8" type="Button" parent="VBoxContainer/PanelContainer/GridContainer" unique_id=526435127]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_du5l4")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_hxae3")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_epcrr")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ft05g")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_1emcd")
-icon_alignment = 1
-expand_icon = true
 
 [node name="restart" type="Button" parent="." unique_id=1670899640]
 layout_mode = 1
@@ -450,3 +86,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_du5l4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_d5wug")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jg2sw")
 text = "RESTART"
+
+[node name="Base" parent="." unique_id=1726152457 instance=ExtResource("6_fl31c")]
+layout_mode = 1
+offset_left = 237.0
+offset_top = 65.0
+offset_right = 537.0
+offset_bottom = 265.0
