@@ -234,10 +234,8 @@ script = ExtResource("1_ashms")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=463540311]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 60.0
-offset_right = 1040.0
-offset_bottom = 660.0
+offset_right = 800.0
+offset_bottom = 600.0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3

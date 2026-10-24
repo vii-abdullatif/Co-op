@@ -12,10 +12,7 @@ var o_score := 0
 func _ready():
 	restart_btn.pressed.connect(_on_restart_pressed)
 	base.finished.connect(_on_base_finished)
-
-func process():
-	x.visible = base.turn=="x"
-	o.visible = base.turn == "o"
+	base.turn_changed.connect(_on_turn_changed)
 
 func _on_restart_pressed():
 	base.restart()
@@ -26,4 +23,7 @@ func _on_base_finished(result:String):
 	elif result == "o":
 		o_score += 1
 	score.text = str(x_score) + " VS " + str(o_score)
-	base.restart()
+
+func _on_turn_changed(turn:String):
+	x.visible = turn == "x"
+	o.visible = turn == "o"

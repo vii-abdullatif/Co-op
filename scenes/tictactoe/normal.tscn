@@ -44,6 +44,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_7e3lt")
 
 [node name="O" type="TextureRect" parent="canvas" unique_id=1378562022]
+visible = false
 offset_left = 1159.0
 offset_top = 599.0
 offset_right = 1199.0
@@ -88,3 +89,7 @@ text = "RESTART"
 
 [node name="Base" parent="." unique_id=1726152457 instance=ExtResource("6_fl31c")]
 layout_mode = 1
+offset_left = 237.0
+offset_top = 65.0
+offset_right = 537.0
+offset_bottom = 265.0

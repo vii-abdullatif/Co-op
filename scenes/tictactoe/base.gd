@@ -4,6 +4,7 @@ signal finished(result:String)
 signal turn_changed(turn:String)
 @export var turn = "x"
 @export var auto_restart := true
+var game_over = false
 var textures = {
 	"x":preload("res://assets/x-tic.png"),
 	"o":preload("res://assets/o.png")
@@ -11,7 +12,6 @@ var textures = {
 
 var buttons = []
 var board = []
-var game_over := false
 
 func _ready():
 	for i in 9:
@@ -25,6 +25,7 @@ func _ready():
 func _on_restart_pressed():
 	restart()
 func restart():
+	game_over = false
 	for btn in buttons:
 		btn.disabled = false
 		btn.icon = Texture.new()
@@ -45,6 +46,7 @@ func _on_btn_pressed(index:int):
 		if auto_restart:
 			await get_tree().create_timer(1).timeout
 			restart()
+			turn_changed.emit(turn)
 		return
 	turn = "o" if turn == "x" else "x"
 	turn_changed.emit(turn)
