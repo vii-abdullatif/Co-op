@@ -137,6 +137,32 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak4ib"]
+bg_color = Color(0.99507433, 0.00030765176, 0.88175607, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7008255, 0.14504245, 0.9441917, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g17kg"]
+bg_color = Color(0.6, 0.16078432, 0.06666667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.38431373, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="math menu" type="Control" unique_id=1362395360]
 layout_mode = 3
 anchors_preset = 15
@@ -208,5 +234,7 @@ rotation = 0.1256457
 theme_override_fonts/font = ExtResource("6_gojsa")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_utshk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ak4ib")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g17kg")
 text = "Back"
 script = ExtResource("7_fvubd")
