@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="4_g17kg"]
 [ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="5_xfhnx"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="6_gojsa"]
+[ext_resource type="Script" uid="uid://dlqlkqcxeepig" path="res://scenes/math/enter/play.gd" id="7_ak4ib"]
 [ext_resource type="Script" uid="uid://b373las5f0suc" path="res://scenes/math/enter/button.gd" id="7_fvubd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pv7d"]
@@ -153,13 +154,13 @@ offset_bottom = 723.0
 color = Color(0.4104027, 0.26359957, 0.56038946, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1137666078]
-position = Vector2(610, 272)
+position = Vector2(562, 263)
 rotation = -0.24587376
 scale = Vector2(12.040974, 12.040974)
 sprite_frames = SubResource("SpriteFrames_ad53y")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=933690512]
-position = Vector2(973, 364.99997)
+position = Vector2(951.00006, 398)
 rotation = -0.24587376
 scale = Vector2(9.467091, 9.467091)
 sprite_frames = SubResource("SpriteFrames_xrd15")
@@ -171,13 +172,13 @@ scale = Vector2(9.776965, 9.776965)
 sprite_frames = SubResource("SpriteFrames_oyp6x")
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1691118310]
-position = Vector2(286, 113.00001)
+position = Vector2(277, 127.99999)
 rotation = -0.24587376
 scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1749278150]
-position = Vector2(977, 98.99999)
+position = Vector2(907, 103.999985)
 rotation = 0.22460917
 scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_t2nnk")
@@ -195,6 +196,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s7wsd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s7rlf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0cvp5")
 text = "Play"
+script = ExtResource("7_ak4ib")
 
 [node name="Button" type="Button" parent="." unique_id=1568837203]
 layout_mode = 0
