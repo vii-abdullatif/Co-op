@@ -1,6 +1,4 @@
 class_name tictactoeLogic
-extends Node
-
 
 const LINES = [
 	
@@ -15,7 +13,7 @@ const LINES = [
 ]
 
 
-static func check_result(board:Array):
+static func check_result(board:Array)->String:
 	for line in LINES:
 		var a:String = board[line[0]]
 		if a != "" and a== board[line[1]] and  a == board[line[2]]:
@@ -25,3 +23,4 @@ static func check_result(board:Array):
 				return "o"
 	if not board.has(""):
 		return "draw"
+	return ""

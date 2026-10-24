@@ -2,11 +2,7 @@ extends Control
 
 signal finished(result:String)
 
-@onready var score :Label = $score
-@onready var x = $canvas/X
-@onready var o = $canvas/O
-@onready var restart_btn = $restart
-var turn = "x"
+@export var turn = "x"
 var x_score := 0
 var o_score := 0
 var textures = {
@@ -18,7 +14,6 @@ var buttons = []
 var board = []
 
 func _ready():
-	restart_btn.pressed.connect(_on_restart_pressed)
 	for i in 9:
 		var btn := find_child(str(i),true,false) as Button
 		if btn == null:
@@ -26,11 +21,6 @@ func _ready():
 		buttons.append(btn)
 		btn.pressed.connect(_on_btn_pressed.bind(i))
 	restart()
-
-func _process(_delta:float):
-	score.text = str(x_score) + " VS " + str(o_score)
-	x.visible = turn=="x"
-	o.visible = turn == "o"
 
 func _on_restart_pressed():
 	restart()
@@ -47,14 +37,15 @@ func _on_btn_pressed(index:int):
 	buttons[index].icon = textures[turn]
 	buttons[index].disabled = true
 	var result = tictactoeLogic.check_result(board)
-	if result =="draw":
+	if result != "":
+		if result == "x":
+			x_score += 1
+		elif result == "o":
+			o_score += 1
+		finished.emit(result)
+		await get_tree().create_timer(1).timeout
 		restart()
-	elif result == "x":
-		x_score += 1
-		restart()
-	elif result == "o":
-		o_score += 1
-		restart()
+		
 	turn = "o" if turn == "x" else "x"
 
 func start(first:String):
