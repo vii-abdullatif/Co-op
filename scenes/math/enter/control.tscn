@@ -153,13 +153,13 @@ offset_bottom = 723.0
 color = Color(0.4104027, 0.26359957, 0.56038946, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1137666078]
-position = Vector2(612.9154, 254.2529)
+position = Vector2(610, 272)
 rotation = -0.24587376
 scale = Vector2(12.040974, 12.040974)
 sprite_frames = SubResource("SpriteFrames_ad53y")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=933690512]
-position = Vector2(950, 361.00003)
+position = Vector2(973, 364.99997)
 rotation = -0.24587376
 scale = Vector2(9.467091, 9.467091)
 sprite_frames = SubResource("SpriteFrames_xrd15")
@@ -171,13 +171,13 @@ scale = Vector2(9.776965, 9.776965)
 sprite_frames = SubResource("SpriteFrames_oyp6x")
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1691118310]
-position = Vector2(356, 110.00001)
+position = Vector2(286, 113.00001)
 rotation = -0.24587376
 scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1749278150]
-position = Vector2(948, 94.99999)
+position = Vector2(977, 98.99999)
 rotation = 0.22460917
 scale = Vector2(5.71875, 5.71875)
 sprite_frames = SubResource("SpriteFrames_t2nnk")
