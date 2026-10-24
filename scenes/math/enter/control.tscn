@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="4_g17kg"]
 [ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="5_xfhnx"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="6_gojsa"]
+[ext_resource type="Script" uid="uid://b373las5f0suc" path="res://scenes/math/enter/button.gd" id="7_fvubd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pv7d"]
 atlas = ExtResource("1_k53ik")
@@ -206,3 +207,4 @@ theme_override_fonts/font = ExtResource("6_gojsa")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_utshk")
 text = "Back"
+script = ExtResource("7_fvubd")
