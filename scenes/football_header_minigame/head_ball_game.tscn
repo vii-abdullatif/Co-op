@@ -20,6 +20,8 @@ position = Vector2(631, 576)
 shape = SubResource("RectangleShape2D_onkbk")
 
 [node name="Player" parent="." unique_id=1023657894 instance=ExtResource("2_1vg24")]
+position = Vector2(296, 557.00006)
+scale = Vector2(5, 5)
 
 [node name="Football" parent="." unique_id=924431815 instance=ExtResource("3_15rkw")]
 position = Vector2(480, 455)

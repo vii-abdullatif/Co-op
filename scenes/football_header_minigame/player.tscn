@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dley6h5w2dai7"]
 
+[ext_resource type="Script" uid="uid://c2p67yt13yd2d" path="res://scenes/football_header_minigame/player.gd" id="1_1k3ea"]
 [ext_resource type="Texture2D" uid="uid://8wkr5ieom73e" path="res://assets/FootballHeader/characters/soccer-player.png" id="1_lfk12"]
 [ext_resource type="Texture2D" uid="uid://cjjeqe38317hi" path="res://assets/FootballHeader/characters/player-shadow.png" id="3_hemv7"]
+[ext_resource type="Script" uid="uid://cl7mvqw665lnv" path="res://scenes/football_header_minigame/player_shadow_2.gd" id="4_flb3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbk66"]
 size = Vector2(11, 27)
@@ -20,9 +22,38 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 4)]
+}
 
-[sub_resource type="Animation" id="Animation_hemv7"]
-resource_name = "jump"
+[sub_resource type="Animation" id="Animation_70kio"]
+resource_name = "after_jump"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_lbk66"]
+resource_name = "idle"
 length = 0.1
 loop_mode = 1
 step = 0.1
@@ -36,7 +67,41 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hemv7"]
+resource_name = "jump"
+length = 0.3
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
 "values": [42]
+}
+
+[sub_resource type="Animation" id="Animation_3vfxj"]
+resource_name = "kick"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [49]
 }
 
 [sub_resource type="Animation" id="Animation_flb3u"]
@@ -56,14 +121,36 @@ tracks/0/keys = {
 "values": [39]
 }
 
+[sub_resource type="Animation" id="Animation_mybin"]
+resource_name = "pre_kick"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [48]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hemv7"]
 _data = {
 &"RESET": SubResource("Animation_lfk12"),
+&"after_jump": SubResource("Animation_70kio"),
+&"idle": SubResource("Animation_lbk66"),
 &"jump": SubResource("Animation_hemv7"),
-&"pre_jump": SubResource("Animation_flb3u")
+&"kick": SubResource("Animation_3vfxj"),
+&"pre_jump": SubResource("Animation_flb3u"),
+&"pre_kick": SubResource("Animation_mybin")
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=1023657894]
+script = ExtResource("1_1k3ea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1061987961]
 position = Vector2(-15, -32)
@@ -71,6 +158,7 @@ texture = ExtResource("1_lfk12")
 centered = false
 hframes = 6
 vframes = 13
+frame = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=562999256]
 position = Vector2(1, -14)
@@ -79,8 +167,7 @@ shape = SubResource("RectangleShape2D_lbk66")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=91485159]
 libraries/ = SubResource("AnimationLibrary_hemv7")
 
-[node name="Shadow" type="Sprite2D" parent="." unique_id=1175266037]
-
-[node name="PlayerShadow" type="Sprite2D" parent="." unique_id=1674333595]
+[node name="PlayerShadow2" type="Sprite2D" parent="." unique_id=1196971443]
 position = Vector2(0, -6)
 texture = ExtResource("3_hemv7")
+script = ExtResource("4_flb3u")
