@@ -3,8 +3,6 @@ extends Control
 signal finished(result:String)
 
 @export var turn = "x"
-var x_score := 0
-var o_score := 0
 var textures = {
 	"x":preload("res://assets/x-tic.png"),
 	"o":preload("res://assets/o.png")
@@ -38,10 +36,6 @@ func _on_btn_pressed(index:int):
 	buttons[index].disabled = true
 	var result = tictactoeLogic.check_result(board)
 	if result != "":
-		if result == "x":
-			x_score += 1
-		elif result == "o":
-			o_score += 1
 		finished.emit(result)
 		await get_tree().create_timer(1).timeout
 		restart()
