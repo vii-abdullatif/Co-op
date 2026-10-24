@@ -64,7 +64,7 @@ shape = SubResource("RectangleShape2D_vtftu")
 [node name="Players" type="Node2D" parent="." unique_id=1710710627]
 
 [node name="BathingDuck1" parent="Players" unique_id=1585401016 instance=ExtResource("2_ar6nh")]
-position = Vector2(29, 157)
+position = Vector2(29, 161)
 
 [node name="Sprite2D" parent="Players/BathingDuck1" index="0" unique_id=1725429950]
 position = Vector2(2, 0)
@@ -81,7 +81,7 @@ shape = SubResource("RectangleShape2D_7mgad")
 debug_color = Color(0, 0.64451164, 0.28556737, 0.41960785)
 
 [node name="BathingDuck2" parent="Players" unique_id=1112630143 instance=ExtResource("2_ar6nh")]
-position = Vector2(25, 540)
+position = Vector2(25, 544)
 
 [node name="Sprite2D" parent="Players/BathingDuck2" index="0" unique_id=1725429950]
 position = Vector2(6, 0)
