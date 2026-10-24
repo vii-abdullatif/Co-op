@@ -6,7 +6,6 @@ const mini_cell_size = Vector2(800,600) / 3.5
 
 @onready var grid = $GridContainer
 @onready var score = $score
-@onready var mini_indicator = $miniIndicator
 @onready var x = $canvas/X
 @onready var o = $canvas/O
 var textures = {
@@ -46,16 +45,16 @@ func _on_mini_finished(result:String):
 	var i = active_cell
 	if i == -1:
 		return
-	var mini = _get_part(i,"mini")
+	var mini_part= _get_part(i,"mini")
 	await get_tree().create_timer(1).timeout
 	if result == "draw":
 		mini_first = flip_turn(mini_first)
-		mini.start(mini_first)
+		mini_part.start(mini_first)
 		return
 	big_board[i] = result
 	_get_slot(i).icon = textures[result]
-	mini.hide()
-	mini.set_locked(true)
+	mini_part.hide()
+	mini_part.set_locked(true)
 	active_cell = -1
 	var big_result = tictactoeLogic.check_result(big_board)
 	if big_result != "":
@@ -74,9 +73,9 @@ func _on_pick(index:int):
 	active_cell = index
 	mini_first = flip_turn(picker)
 	mini_turn = mini_first
-	var mini = _get_part(index,"mini")
-	mini.set_locked(false)
-	mini.start(mini_first)
+	var mini_part = _get_part(index,"mini")
+	mini_part.set_locked(false)
+	mini_part.start(mini_first)
 	update_ui()
 	
 
@@ -99,8 +98,6 @@ func new_match():
 func update_ui():
 	for i in 9:
 		_get_slot(i).modulate.a = 1.0 if (active_cell == -1 or i == active_cell) else 0.5
-	var current = mini_turn if active_cell == -1 else picker
-	
 
 func _get_slot(i:int)->Control:
 	return grid.get_node(str(i))
