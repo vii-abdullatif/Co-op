@@ -12,12 +12,13 @@ const LINES = [
 	[0,4,8],[2,4,6]
 ]
 
+@onready var score :Label = $score
 @onready var x = $canvas/X
 @onready var o = $canvas/O
 @onready var restart_btn = $restart
 var turn = "x"
 var x_score := 0
-var y_score := 0
+var o_score := 0
 var textures = {
 	"x":preload("res://assets/x-tic.png"),
 	"o":preload("res://assets/o.png")
@@ -54,6 +55,7 @@ func _ready():
 	restart()
 
 func _process(_delta:float):
+	score.text = str(x_score) + " VS " + str(o_score)
 	x.visible = turn=="x"
 	o.visible = turn == "o"
 
@@ -78,6 +80,11 @@ func check_result():
 	for line in LINES:
 		var a:String = board[line[0]]
 		if a != "" and a== board[line[1]] and  a == board[line[2]]:
-			print(a)
+			if a=="x":
+				x_score+=1
+			else:
+				o_score+=1
+			restart()
 	if not board.has(""):
+		await get_tree().create_timer(1.5).timeout
 		restart()
