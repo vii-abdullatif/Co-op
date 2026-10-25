@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://vaa4x0cvsxoh"]
+
+[ext_resource type="FontFile" uid="uid://b3dhoat5bpovy" path="res://assets/fonts/MEMENU.ttf" id="1_24v62"]
+
+[node name="BathingDuckRaceHud" type="Control" unique_id=1957423387]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1Score" type="Label" parent="." unique_id=760138947]
+layout_mode = 0
+offset_right = 149.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.22484976, 0.0005177906, 0.5386824, 1)
+theme_override_fonts/font = ExtResource("1_24v62")
+theme_override_font_sizes/font_size = 32
+text = "Player 1 Score :"

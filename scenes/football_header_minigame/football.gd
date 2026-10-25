@@ -17,3 +17,6 @@ func bouncing(delta: float) -> void:
 		if reflected.length() < min_bounce_speed:
 			reflected = Vector2.ZERO
 		velocity = reflected
+
+func apply_impulse(force: Vector2) -> void:
+	velocity += force
