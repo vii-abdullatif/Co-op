@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cdlv0j5u3siyy"]
+
+[ext_resource type="Script" uid="uid://cp03eomdqs0s" path="res://scenes/football_header_minigame/football.gd" id="1_nwoud"]
+[ext_resource type="Texture2D" uid="uid://0y176mlgc5y4" path="res://assets/bath_duck_race/football.png" id="1_tnpf6"]
+[ext_resource type="Texture2D" uid="uid://dvnvwxk8drx5i" path="res://assets/FootballHeader/props/ball-shadow.png" id="2_nwoud"]
+[ext_resource type="Script" uid="uid://yswy171idfug" path="res://scenes/football_header_minigame/shadow.gd" id="4_v4ji7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4ji7"]
+radius = 19.104973
+
+[node name="Football" type="CharacterBody2D" unique_id=924431815 groups=["ball"]]
+script = ExtResource("1_nwoud")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1979107442]
+position = Vector2(-32, -54)
+texture = ExtResource("1_tnpf6")
+centered = false
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=872861162]
+position = Vector2(0, -24)
+scale = Vector2(4, 4)
+texture = ExtResource("2_nwoud")
+script = ExtResource("4_v4ji7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=760872841]
+position = Vector2(0, -19)
+shape = SubResource("CircleShape2D_v4ji7")

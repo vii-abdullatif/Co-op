@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://bydycasdq7r0h"]
+
+[ext_resource type="Script" uid="uid://dklvkuoebnx63" path="res://scenes/bath_duck_minigame/bath_duck_race.gd" id="1_umxge"]
+[ext_resource type="PackedScene" uid="uid://5bf6ch87orf4" path="res://scenes/bath_duck_minigame/background.tscn" id="1_vtftu"]
+[ext_resource type="PackedScene" uid="uid://dvrw1h051o6x2" path="res://scenes/bath_duck_minigame/bathing_duck.tscn" id="2_ar6nh"]
+[ext_resource type="Texture2D" uid="uid://c8oyyefkcla74" path="res://assets/bath_duck_race/red_bathing_duck.png" id="3_e20a5"]
+[ext_resource type="Texture2D" uid="uid://bte4imyudoer1" path="res://assets/bath_duck_race/blue_bathing_duck.png" id="4_e20a5"]
+[ext_resource type="Script" uid="uid://5g650mw64odt" path="res://scenes/bath_duck_minigame/p_layer_detection.gd" id="5_7mgad"]
+[ext_resource type="PackedScene" uid="uid://d127fpg1i8ymb" path="res://scenes/bath_duck_minigame/bathing_duck_race_hud.tscn" id="5_hxrcf"]
+[ext_resource type="Script" uid="uid://mju2h8b2bng7" path="res://scenes/bath_duck_minigame/bathing_duck_race_hud.gd" id="6_s142k"]
+[ext_resource type="PackedScene" uid="uid://vaa4x0cvsxoh" path="res://scenes/bath_duck_minigame/bathing_duck_race_hud2.tscn" id="7_lpb2p"]
+[ext_resource type="Script" uid="uid://btvssk17vt4tr" path="res://scenes/bath_duck_minigame/bathing_duck_race_hud_2.gd" id="8_pgdu0"]
+[ext_resource type="PackedScene" uid="uid://bbgfrtx1xskrr" path="res://scenes/bath_duck_minigame/bath_ducks_screen.tscn" id="10_0madr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onkbk"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtftu"]
+size = Vector2(1280, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mgad"]
+size = Vector2(5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgdu0"]
+size = Vector2(5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ad8vj"]
+size = Vector2(23, 546)
+
+[node name="BathDuckRace" type="Node2D" unique_id=1535550848]
+script = ExtResource("1_umxge")
+
+[node name="Background" parent="." unique_id=273113762 instance=ExtResource("1_vtftu")]
+
+[node name="Borders" type="Node2D" parent="." unique_id=914607075]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=601376406]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=22907195]
+position = Vector2(-10, 360)
+shape = SubResource("RectangleShape2D_onkbk")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1235358800]
+position = Vector2(1300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=472000070]
+position = Vector2(-10, 360)
+shape = SubResource("RectangleShape2D_onkbk")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1490054859]
+position = Vector2(881, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=919039519]
+position = Vector2(-241, 516)
+shape = SubResource("RectangleShape2D_vtftu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1465891665]
+position = Vector2(881, -335)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=494666023]
+position = Vector2(-241, 516)
+shape = SubResource("RectangleShape2D_vtftu")
+
+[node name="Players" type="Node2D" parent="." unique_id=1710710627]
+
+[node name="BathingDuck1" parent="Players" unique_id=1585401016 instance=ExtResource("2_ar6nh")]
+position = Vector2(29, 161)
+
+[node name="Sprite2D" parent="Players/BathingDuck1" index="0" unique_id=1725429950]
+position = Vector2(2, 0)
+texture = ExtResource("3_e20a5")
+
+[node name="CollisionShape2D" parent="Players/BathingDuck1" index="1" unique_id=1299167583]
+position = Vector2(0, -4)
+
+[node name="Player1Area" type="Area2D" parent="Players/BathingDuck1" unique_id=682218210 groups=["Duck1"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players/BathingDuck1/Player1Area" unique_id=603231393]
+position = Vector2(23.5, -15)
+shape = SubResource("RectangleShape2D_7mgad")
+debug_color = Color(0, 0.64451164, 0.28556737, 0.41960785)
+
+[node name="BathingDuck2" parent="Players" unique_id=1112630143 instance=ExtResource("2_ar6nh")]
+position = Vector2(25, 544)
+
+[node name="Sprite2D" parent="Players/BathingDuck2" index="0" unique_id=1725429950]
+position = Vector2(6, 0)
+texture = ExtResource("4_e20a5")
+
+[node name="CollisionShape2D" parent="Players/BathingDuck2" index="1" unique_id=1299167583]
+position = Vector2(4, -4)
+
+[node name="Player2Area" type="Area2D" parent="Players/BathingDuck2" unique_id=1410014631 groups=["Duck2"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players/BathingDuck2/Player2Area" unique_id=597834755]
+position = Vector2(27.5, -14)
+shape = SubResource("RectangleShape2D_pgdu0")
+debug_color = Color(0.24607483, 0.636264, 0, 0.41960785)
+
+[node name="VictoryDetectionArea" type="Node2D" parent="." unique_id=1056409679]
+
+[node name="PLayerDetection" type="Area2D" parent="VictoryDetectionArea" unique_id=1299999463]
+script = ExtResource("5_7mgad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryDetectionArea/PLayerDetection" unique_id=166415172]
+position = Vector2(1268.5, 273)
+shape = SubResource("RectangleShape2D_ad8vj")
+debug_color = Color(0, 0.6445597, 0.28462565, 0.41960785)
+
+[node name="BathDucksScreen" parent="." unique_id=752214203 instance=ExtResource("10_0madr")]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Background" parent="BathDucksScreen" index="0" unique_id=1712555674]
+metadata/_edit_use_anchors_ = true
+
+[node name="Labels" parent="BathDucksScreen" index="1" unique_id=631063657]
+metadata/_edit_use_anchors_ = true
+
+[node name="Hud" type="CanvasLayer" parent="." unique_id=672893929]
+
+[node name="BathingDuckRaceHud" parent="Hud" unique_id=1957423387 instance=ExtResource("5_hxrcf")]
+script = ExtResource("6_s142k")
+
+[node name="BathingDuckRaceHud2" parent="Hud" unique_id=829203557 instance=ExtResource("7_lpb2p")]
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 6.0
+offset_bottom = 4.0
+script = ExtResource("8_pgdu0")
+
+[node name="Player1Score" parent="Hud/BathingDuckRaceHud2" index="0" unique_id=760138947]
+offset_top = 336.0
+offset_right = 206.0
+offset_bottom = 375.0
+text = "Player 2 Score :"
+
+[connection signal="area_entered" from="VictoryDetectionArea/PLayerDetection" to="VictoryDetectionArea/PLayerDetection" method="_on_area_entered"]
+[connection signal="pressed" from="BathDucksScreen/Buttons/Restart" to="." method="_on_restart_pressed"]
+
+[editable path="Players/BathingDuck1"]
+[editable path="Players/BathingDuck2"]
+[editable path="BathDucksScreen"]
+[editable path="Hud/BathingDuckRaceHud"]
+[editable path="Hud/BathingDuckRaceHud2"]
