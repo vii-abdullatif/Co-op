@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbj8vc38x848j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pos8"]
-bg_color = Color(0.79211473, 0.3977574, 0.6852773, 1)
+bg_color = Color(0.7921569, 0.39607844, 0.6862745, 1)
 border_width_left = 16
 border_width_top = 16
 border_width_right = 16
@@ -15,14 +15,56 @@ corner_radius_bottom_left = 16
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfrx5"]
-bg_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
-border_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hvcy"]
+bg_color = Color(0.88792247, 0.6014674, 0.8021656, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
 border_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
 border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hvcy"]
+bg_color = Color(0.8392157, 0.47058824, 0.7372549, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqg0p"]
+bg_color = Color(0.7921569, 0.39607844, 0.6862745, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tr8j5"]
+bg_color = Color(0.7921569, 0.39607844, 0.6862745, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.27058825, 0.08627451, 0.22745098, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Control" type="Control" unique_id=823149981]
 layout_mode = 3
@@ -44,6 +86,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_5pos8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nfrx5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0hvcy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bqg0p")
 theme_override_styles/focus = SubResource("StyleBoxFlat_tr8j5")
 icon_alignment = 1
 expand_icon = true
