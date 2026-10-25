@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxhod1hpf20pl"
-path="res://.godot/imported/hangout.png-c417ee791d09c0a719f24b0893175f9a.ctex"
+uid="uid://cp6waxupw6urx"
+path="res://.godot/imported/IMG_20260522_102645.png-31e253ae503fca52c638b86093c76a2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hangout.png"
-dest_files=["res://.godot/imported/hangout.png-c417ee791d09c0a719f24b0893175f9a.ctex"]
+source_file="res://assets/TagGame/IMG_20260522_102645.png"
+dest_files=["res://.godot/imported/IMG_20260522_102645.png-31e253ae503fca52c638b86093c76a2e.ctex"]
 
 [params]
 
