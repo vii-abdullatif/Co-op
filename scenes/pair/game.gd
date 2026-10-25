@@ -1,13 +1,19 @@
 extends Node
 
+@onready var grid = $GridContainer
+@onready var blue_label = $"canvas/1"
+@onready var red_label = $"canvas/2"
+@onready var turn_label = $Label
+
+var fruits = []
 var card_scene = load("res://scenes/pair/card.tscn")
 var turn := "Blue"
+var locked := true
 var blue_score := 0
 var red_score := 0
-var cards_in_hand := []
-var fruit_in_hand = null
-@onready var grid = $GridContainer
-var fruits = []
+var first_btn :Button = null
+var first_index := -1
+var matched := 0
 # Fruits assets path
 const path := "res://assets/fruits"
 
@@ -52,15 +58,42 @@ func _ready():
 	await get_tree().create_timer(2).timeout
 	for child in grid.get_children():
 		child.get_node("Card").icon = null
-	
+	locked = false
+
 func _on_card_pressed(btn:Button,fruit_num:int):
+	if locked :
+		return
 	btn.icon = fruits[fruit_num]
-	cards_in_hand.appedn(fruit_num)
-	if card_in_hands == 2:
-		if fruits[fruit_num] == fruit_in_hand:
-			if turn == "Blue":
-				blue_score += 1
-			else:
-				red_score += 1
+	btn.disabled = true
+	
+	if first_btn == null:
+		first_btn = btn
+		first_index = fruit_num
+		return
+	locked = true
+	if fruits[fruit_num] == fruits[first_index]:
+		if turn == "Blue":
+			blue_score += 1
 		else:
-			
+			red_score += 1
+		matched += 1
+	else:
+		await get_tree().create_timer(1).timeout
+		btn.icon = null
+		btn.disabled = false
+		first_btn.icon = null
+		first_btn.disabled = false
+		turn = "Red" if turn == "Blue" else "Blue"
+		
+	first_btn = null
+	first_index = -1
+	update_ui()
+	if matched == 18:
+		locked = true
+		return
+	locked = false
+
+func update_ui():
+	blue_label.text = str(blue_score)
+	red_label.text = str(red_score)
+	turn_label.text = turn.to_upper()+"'S" + " TURN"
