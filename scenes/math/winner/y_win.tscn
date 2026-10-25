@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://badi7teu6xl7s"]
+
+[ext_resource type="Texture2D" uid="uid://dfbd8pqmhk01r" path="res://assets/ywin.png" id="1_62mdi"]
+[ext_resource type="FontFile" uid="uid://b3dhoat5bpovy" path="res://assets/fonts/MEMENU.ttf" id="2_xlclb"]
+[ext_resource type="FontFile" uid="uid://dh33okywy4tdl" path="res://assets/fonts/Cozy Autumns.ttf" id="3_r4oeb"]
+[ext_resource type="Script" uid="uid://b373las5f0suc" path="res://scenes/math/enter/button.gd" id="4_r4oeb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7wsd"]
+bg_color = Color(0.98039216, 0.1254902, 0.47843137, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.07058824, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="YWin" type="Control" unique_id=596474201]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1833515214]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=786700232]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_62mdi")
+
+[node name="Label" type="Label" parent="." unique_id=10274034]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 390.0
+offset_right = 1224.0
+offset_bottom = 672.0
+theme_override_fonts/font = ExtResource("2_xlclb")
+theme_override_font_sizes/font_size = 86
+text = "W for beating x.
+Now we know that is weak
+and is too much of a skill issue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=362286780]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 218.0
+offset_right = 950.0
+offset_bottom = 341.0
+theme_override_fonts/font = ExtResource("3_r4oeb")
+theme_override_font_sizes/font_size = 74
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7wsd")
+text = "Back"
+script = ExtResource("4_r4oeb")
