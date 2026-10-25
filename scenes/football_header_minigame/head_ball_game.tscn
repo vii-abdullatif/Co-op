@@ -134,15 +134,20 @@ text = "Player 2 Goals:"
 metadata/_edit_use_anchors_ = true
 
 [node name="FootballStopScene" parent="." unique_id=391438046 instance=ExtResource("7_7s8kx")]
+process_mode = 3
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 1280.0
 offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Controlling/GoalDetection/Player_1_Goal2" to="." method="_on_player_1_goal_2_body_entered"]
 [connection signal="body_entered" from="Controlling/GoalDetection/Player_2_Goal" to="." method="_on_player_2_goal_body_entered"]
+[connection signal="pressed" from="FootballStopScene/Buttons/Resume" to="." method="_on_resume_pressed"]
 
 [editable path="Controlling/Player_2"]
+[editable path="FootballStopScene"]

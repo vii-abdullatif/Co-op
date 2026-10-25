@@ -6,7 +6,6 @@ extends Node2D
 @onready var football_stop_scene: Control = $FootballStopScene
 
 func _process(_delta: float) -> void:
-	print("onepoiece")
 	player_1.text = "Player 1 Goals: " + str(ViiGlobals.football_game_p2)
 	player_2.text = "Player 2 Goals: " + str(ViiGlobals.football_game_p1)
 	if Input.is_action_just_pressed("escape"):
@@ -22,3 +21,7 @@ func _on_player_2_goal_body_entered(body: Node2D) -> void:
 		if body.is_in_group("ball"):
 			get_tree().call_deferred("reload_current_scene")
 			ViiGlobals.football_game_p2 += 1
+
+func _on_resume_pressed() -> void:
+	get_tree().paused = false
+	football_stop_scene.visible = false
