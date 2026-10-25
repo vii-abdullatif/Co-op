@@ -2,9 +2,9 @@ extends Control
 
 @onready var x = $canvas/X
 @onready var o = $canvas/O
-@onready var base = $Base
-@onready var restart_btn = $restart
-@onready var score = $score
+@onready var base = $canvas/Base
+@onready var restart_btn = $canvas/restart
+@onready var score = $canvas/score
 
 var x_score := 0
 var o_score := 0

@@ -36,12 +36,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_bd064")
 
-[node name="X" type="TextureRect" parent="canvas" unique_id=1253411677]
-offset_left = 1.0
-offset_right = 41.0
-offset_bottom = 40.0
-scale = Vector2(3, 3)
-texture = ExtResource("2_7e3lt")
+[node name="Base" parent="canvas" unique_id=1726152457 instance=ExtResource("6_fl31c")]
+offset_left = 237.0
+offset_top = 65.0
+offset_right = 1037.0
+offset_bottom = 665.0
 
 [node name="O" type="TextureRect" parent="canvas" unique_id=1378562022]
 visible = false
@@ -52,8 +51,14 @@ offset_bottom = 639.0
 scale = Vector2(3, 3)
 texture = ExtResource("3_q0egu")
 
-[node name="score" type="Label" parent="." unique_id=1425565896]
-layout_mode = 0
+[node name="X" type="TextureRect" parent="canvas" unique_id=1253411677]
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_7e3lt")
+
+[node name="score" type="Label" parent="canvas" unique_id=1425565896]
 offset_left = 985.0
 offset_top = 40.0
 offset_right = 1224.0
@@ -63,14 +68,12 @@ text = "0 VS 0"
 label_settings = SubResource("LabelSettings_fl31c")
 horizontal_alignment = 1
 
-[node name="restart" type="Button" parent="." unique_id=1670899640]
-layout_mode = 1
+[node name="restart" type="Button" parent="canvas" unique_id=1670899640]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = 640.0
+offset_top = -80.0
 offset_right = 254.0
-offset_bottom = 720.0
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -86,10 +89,3 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_du5l4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_d5wug")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jg2sw")
 text = "RESTART"
-
-[node name="Base" parent="." unique_id=1726152457 instance=ExtResource("6_fl31c")]
-layout_mode = 1
-offset_left = 237.0
-offset_top = 65.0
-offset_right = 537.0
-offset_bottom = 265.0
