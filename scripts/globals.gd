@@ -2,6 +2,22 @@ extends Node
 # Path prefix for new scenes to be added
 const path_prefix = "res://scenes/"
 
+const hold_interval := 2.0
+var held := 0.0
+var fired := false
+
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _process(delta:float):
+	if Input.is_action_pressed("escape"):
+		held += delta
+		if held >= hold_interval and not fired:
+			fired = true
+			get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
+	else:
+		held = 0.0
+		fired = false
 
 # Function for switching scenes so it's unified globally
 func switch_to_scene(path:String):
