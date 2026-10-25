@@ -104,13 +104,15 @@ func _on_card_pressed(btn:Button,fruit_num:int):
 			red_score += 1
 		matched += 1
 	else:
+		turn = "Red" if turn == "Blue" else "Blue"
+		update_ui()
+		
 		# Await for one second then reverse
 		await get_tree().create_timer(1).timeout
 		btn.icon = null
 		btn.disabled = false
 		first_btn.icon = null
 		first_btn.disabled = false
-		turn = "Red" if turn == "Blue" else "Blue"
 	
 	# Reset everything and update ui
 	first_btn = null

@@ -7,8 +7,8 @@ const mini_scene = preload("res://scenes/tictactoe/base.tscn")
 const design_size = Vector2(800,600)
 
 # Main Grid, score and canvases
-@onready var grid = $GridContainer
-@onready var score = $score
+@onready var grid = $canvas/GridContainer
+@onready var score = $canvas/score
 @onready var x = $canvas/X
 @onready var o = $canvas/O
 @onready var audio = $audioplayer
@@ -148,4 +148,4 @@ func _on_mini_turn_changed(new_turn:String):
 
 # Update score
 func _process(_delta:float):
-	$score.text = str(x_score) + " VS " + str(o_score)
+	$canvas/score.text = str(x_score) + " VS " + str(o_score)
