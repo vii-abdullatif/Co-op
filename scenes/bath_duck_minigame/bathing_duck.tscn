@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dvrw1h051o6x2"]
+
+[ext_resource type="Script" uid="uid://loyn7rxld651" path="res://scenes/bath_duck_minigame/bathing_duck.gd" id="1_mt63b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ad8vj"]
+radius = 4.0
+height = 42.0
+
+[node name="BathingDuck" type="CharacterBody2D" unique_id=1585401016]
+script = ExtResource("1_mt63b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1725429950]
+scale = Vector2(-1, 1)
+centered = false
+offset = Vector2(-32, -60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1299167583]
+position = Vector2(-2, -4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ad8vj")

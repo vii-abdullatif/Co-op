@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dfpwdl8vivit2"]
+
+[ext_resource type="Script" uid="uid://smv71suhphm4" path="res://scenes/pair/game.gd" id="1_e7foq"]
+[ext_resource type="Texture2D" uid="uid://bcxau51qre2d8" path="res://assets/bg_expanded.png" id="2_4rwrn"]
+[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="3_qfjeg"]
+[ext_resource type="AudioStream" uid="uid://b1qcxo3i4yb26" path="res://assets/audio/flip.mp3" id="4_4rwrn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nfrx5"]
+font = ExtResource("3_qfjeg")
+font_size = 64
+outline_size = 36
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_0hvcy"]
+font = ExtResource("3_qfjeg")
+font_size = 48
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PairGame" type="Control" unique_id=696347449]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e7foq")
+
+[node name="canvas" type="CanvasLayer" parent="." unique_id=265366980]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="canvas" unique_id=1276620263]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_4rwrn")
+
+[node name="1" type="Label" parent="canvas" unique_id=955620]
+offset_left = 30.0
+offset_top = 8.0
+offset_right = 90.0
+offset_bottom = 112.0
+text = "0"
+label_settings = SubResource("LabelSettings_nfrx5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Label" parent="canvas" unique_id=76344490]
+offset_left = 1190.0
+offset_top = 614.0
+offset_right = 1250.0
+offset_bottom = 718.0
+text = "0"
+label_settings = SubResource("LabelSettings_nfrx5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=564824065]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="Label" type="Label" parent="." unique_id=61990602]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.5
+offset_top = -78.0
+offset_right = 146.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "BLUE's TURN"
+label_settings = SubResource("LabelSettings_0hvcy")
+
+[node name="audioplayer" type="AudioStreamPlayer" parent="." unique_id=1525954955]
+stream = ExtResource("4_4rwrn")

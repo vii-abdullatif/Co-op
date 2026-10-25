@@ -1,0 +1,55 @@
+extends Node
+# Path prefix for new scenes to be added
+const path_prefix = "res://scenes/"
+
+const hold_interval := 2.0
+var held := 0.0
+var fired := false
+
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _process(delta:float):
+	if Input.is_action_pressed("escape"):
+		held += delta
+		if held >= hold_interval and not fired:
+			fired = true
+			get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
+	else:
+		held = 0.0
+		fired = false
+
+# Function for switching scenes so it's unified globally
+func switch_to_scene(path:String):
+	# Get current scene, aka the hall the player chooses from
+	var current = get_tree().current_scene
+	
+	# Check and confirm
+	if current.name != "Game":
+		
+		# Full path : "res://scenes/folder_name/scene_name"
+		var full_path = path_prefix + path
+		
+		# Confirm it exsists
+		if not ResourceLoader.exists(full_path):
+			return
+		
+		# Load scene and instantiate
+		var scene:PackedScene = load(full_path)
+		var instance = scene.instantiate()
+		
+		# Get canvas and make them layer 30
+		for child in instance.get_children():
+			if child is CanvasLayer:
+				# Increase layer, to keep the order of layers in the child scene
+				child.layer += 30
+		
+		# Add child :D
+		current.add_child(instance)
+
+# Remove minigame scene
+func end_minigame(scene_name:String):
+	# Confirm and remove :P
+	var current = get_tree().current_scene
+	if current.has_node(scene_name):
+		current.get_node(scene_name).queue_free()

@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bbnh2mjs62eis"]
+
+[ext_resource type="Script" uid="uid://ihq5gvn2ptlk" path="res://scenes/tictactoe/normal.gd" id="1_7e3lt"]
+[ext_resource type="Texture2D" uid="uid://bcxau51qre2d8" path="res://assets/bg_expanded.png" id="1_bd064"]
+[ext_resource type="Texture2D" uid="uid://c8yde1xlmaid0" path="res://assets/x-tic.png" id="2_7e3lt"]
+[ext_resource type="Texture2D" uid="uid://2mckrg0vctfs" path="res://assets/o.png" id="3_q0egu"]
+[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="5_q0egu"]
+[ext_resource type="PackedScene" uid="uid://ba81dhf3gyhdp" path="res://scenes/tictactoe/base.tscn" id="6_fl31c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fl31c"]
+font = ExtResource("5_q0egu")
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epvp8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yhqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_du5l4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d5wug"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jg2sw"]
+
+[node name="Normal" type="Control" unique_id=1482953940]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7e3lt")
+
+[node name="canvas" type="CanvasLayer" parent="." unique_id=1656469774]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="canvas" unique_id=991345710]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bd064")
+
+[node name="Base" parent="canvas" unique_id=1726152457 instance=ExtResource("6_fl31c")]
+offset_left = 237.0
+offset_top = 65.0
+offset_right = 1037.0
+offset_bottom = 665.0
+
+[node name="O" type="TextureRect" parent="canvas" unique_id=1378562022]
+visible = false
+offset_left = 1159.0
+offset_top = 599.0
+offset_right = 1199.0
+offset_bottom = 639.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_q0egu")
+
+[node name="X" type="TextureRect" parent="canvas" unique_id=1253411677]
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_7e3lt")
+
+[node name="score" type="Label" parent="canvas" unique_id=1425565896]
+offset_left = 985.0
+offset_top = 40.0
+offset_right = 1224.0
+offset_bottom = 118.0
+size_flags_horizontal = 4
+text = "0 VS 0"
+label_settings = SubResource("LabelSettings_fl31c")
+horizontal_alignment = 1
+
+[node name="restart" type="Button" parent="canvas" unique_id=1670899640]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_right = 254.0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.7764706, 0.16862746, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9019608, 0.20392157, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.40317222, 0.27591887, 1)
+theme_override_colors/font_hover_color = Color(0.9019608, 0.20392157, 0, 1)
+theme_override_fonts/font = ExtResource("5_q0egu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_epvp8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2yhqe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_du5l4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d5wug")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jg2sw")
+text = "RESTART"
