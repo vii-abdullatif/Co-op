@@ -1,3 +1,3 @@
 extends Node
-@export var x = 3
-@export var y = 3
+@export var x: int = 3
+@export var y: int = 3

@@ -3,8 +3,10 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 const SPEED = 300.0
 var direction
+@export var interact_action := "interact_2"
 
 func _ready() -> void:
+	add_to_group("player")
 	sprite.animation = "down"
 	sprite.frame = 0
 	sprite.stop()

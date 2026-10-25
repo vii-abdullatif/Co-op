@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b7wtbtaculvic"]
+
+[ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="2_l0bgl"]
+[ext_resource type="Script" uid="uid://t6ctvkn85yld" path="res://scenes/math/games/button2.gd" id="3_0lj3r"]
+[ext_resource type="Texture2D" uid="uid://deq0h8a3hlcli" path="res://assets/theta.png" id="3_mfxq7"]
+[ext_resource type="FontFile" uid="uid://dqeyav1db84t6" path="res://assets/fonts/upheavtt.ttf" id="4_cgakm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7wsd"]
+bg_color = Color(0.047058824, 0.49411765, 0.03529412, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.02745098, 0.44705883, 0.44705883, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control" unique_id=893935046]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=533257422]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=109060265]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.023529412, 0.25882354, 0.44313726, 1)
+
+[node name="Label" type="Label" parent="." unique_id=531723344]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 33.0
+offset_right = 945.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("4_cgakm")
+theme_override_font_sizes/font_size = 57
+text = "Hello, I am Theta, the
+variable u will try to
+solve for. Don't worry
+most questions are easy,
+but there are some
+tricky questions that
+u may stuggle with."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1173076067]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 500.0
+offset_right = 623.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("2_l0bgl")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7wsd")
+text = "Oki"
+script = ExtResource("3_0lj3r")
+
+[node name="Theta" type="Sprite2D" parent="." unique_id=1467344385]
+position = Vector2(1020.0001, 481.00003)
+scale = Vector2(12.65625, 12.65625)
+texture = ExtResource("3_mfxq7")
