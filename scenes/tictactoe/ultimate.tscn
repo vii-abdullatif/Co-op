@@ -398,3 +398,5 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_j6k2f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_71fpw")
 icon_alignment = 1
 expand_icon = true
+
+[node name="audioplayer" type="AudioStreamPlayer" parent="." unique_id=1627736612]

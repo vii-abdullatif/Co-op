@@ -11,6 +11,7 @@ const design_size = Vector2(800,600)
 @onready var score = $score
 @onready var x = $canvas/X
 @onready var o = $canvas/O
+@onready var audio = $audioplayer
 
 # Load textures for strokes
 var textures = {
@@ -34,6 +35,7 @@ var mini_turn = "o"
 var game_done = false
 
 func _ready():
+	audio.play()
 	# Insantiate the grid 9 times
 	for i in 9:
 		# Slot -> Big box to place base.tscn inside

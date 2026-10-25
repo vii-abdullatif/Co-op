@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://smv71suhphm4" path="res://scenes/pair/game.gd" id="1_e7foq"]
 [ext_resource type="Texture2D" uid="uid://bcxau51qre2d8" path="res://assets/bg_expanded.png" id="2_4rwrn"]
 [ext_resource type="FontFile" uid="uid://b2nuykbdi5yru" path="res://assets/fonts/Daydream DEMO.otf" id="3_qfjeg"]
+[ext_resource type="AudioStream" uid="uid://b1qcxo3i4yb26" path="res://assets/audio/flip.mp3" id="4_4rwrn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nfrx5"]
 font = ExtResource("3_qfjeg")
@@ -83,3 +84,6 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "BLUE's TURN"
 label_settings = SubResource("LabelSettings_0hvcy")
+
+[node name="audioplayer" type="AudioStreamPlayer" parent="." unique_id=1525954955]
+stream = ExtResource("4_4rwrn")

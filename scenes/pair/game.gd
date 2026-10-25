@@ -4,7 +4,7 @@ extends Node
 @onready var blue_label = $"canvas/1"
 @onready var red_label = $"canvas/2"
 @onready var turn_label = $Label
-
+@onready var audio = $audioplayer
 var fruits = []
 var card_scene = load("res://scenes/pair/card.tscn")
 var turn := "Blue"
@@ -63,6 +63,7 @@ func _ready():
 func _on_card_pressed(btn:Button,fruit_num:int):
 	if locked :
 		return
+	audio.play()
 	btn.icon = fruits[fruit_num]
 	btn.disabled = true
 	
