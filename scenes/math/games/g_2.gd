@@ -12,12 +12,14 @@ var ans = 1
 func _ready() -> void:
 	x_ans = 0
 	y_ans = 0
+	x.animation = "3"
+	y.animation = "3"
 	x_sub.pressed.connect(x_submit)
+	y_sub.pressed.connect(y_submit)
 	
 func _process(delta: float) -> void:
 	x_dis.text = str(x_ans)
 	y_dis.text = str(y_ans)
-	x.animation = "3->2"
 	increase()
 	
 func increase():
@@ -37,8 +39,25 @@ func x_submit():
 		await audio.finished
 		audio.stream = load("res://assets/SFX/fortnite-shield-break-sound.mp3")
 		audio.play()
-		await audio.finished
-		get_tree().change_scene_to_file("res://scenes/math/games/g3.tscn")
+		Score.y -= 1
+		if Score.y == 2:
+			y.play("3->2")
+			await ywait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/games/g3.tscn")
+		elif Score.y == 1:
+			y.play("2->1")
+			await ywait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/games/g3.tscn")
+		elif Score.y == 0:
+			y.play("1->0")
+			await ywait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/winner/x_win.tscn")
 	else:
 		audio.stream = load("res://assets/SFX/ElevenLabs_Red_Hit_Sound_(Bad_Damage)_Tool__Mubert_or_Soundraw_Prompt___Game_damage_sound_effect,_negative_erro.mp3")
 		audio.play()
@@ -48,4 +67,42 @@ func y_submit():
 		audio.stream = load("res://assets/SFX/correct.mp3")
 		audio.play()
 		await audio.finished
+		audio.stream = load("res://assets/SFX/fortnite-shield-break-sound.mp3")
+		audio.play()
+		Score.x -= 1
+		if Score.x == 2:
+			x.play("3->2")
+			await xwait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/games/g3.tscn")
+		elif Score.x == 1:
+			x.play("2->1")
+			await xwait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/games/g3.tscn")
+		elif Score.x == 0:
+			x.play("1->0")
+			await xwait()
+			ani = false
+			au = false
+			get_tree().change_scene_to_file("res://scenes/math/winner/y_win.tscn")
+	else:
+		audio.stream = load("res://assets/SFX/ElevenLabs_Red_Hit_Sound_(Bad_Damage)_Tool__Mubert_or_Soundraw_Prompt___Game_damage_sound_effect,_negative_erro.mp3")
+		audio.play()
 		
+var ani = false
+var au = false
+func ywait():
+	y.animation_finished.connect(func(): ani = true)
+	audio.finished.connect(func(): au = true)
+	while not (au and ani):
+		await get_tree().process_frame
+
+func xwait():
+	x.animation_finished.connect(func(): ani = true)
+	audio.finished.connect(func(): au = true)
+	while not (au and ani):
+		await get_tree().process_frame
+	

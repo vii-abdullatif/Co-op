@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dtmo2oli8ajtl"]
 
+[ext_resource type="Script" uid="uid://dxkg0il88oqbm" path="res://scenes/math/games/g_3.gd" id="1_gas4j"]
 [ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="1_j5mj7"]
 [ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="2_i4fr4"]
 [ext_resource type="Texture2D" uid="uid://b4h1xd32i01xw" path="res://assets/derx.png" id="4_uiwxq"]
@@ -256,6 +257,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gas4j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=533257422]
 layer = -1
@@ -357,3 +359,5 @@ vertical_alignment = 1
 position = Vector2(454, 150)
 scale = Vector2(8.895834, 8.125)
 texture = ExtResource("8_uiwxq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2045676831]

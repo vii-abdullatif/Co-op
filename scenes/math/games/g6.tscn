@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dip28tfpic57t"]
 
+[ext_resource type="Script" uid="uid://brga4m8j5uqkp" path="res://scenes/math/games/g_6.gd" id="1_f7njl"]
 [ext_resource type="Texture2D" uid="uid://biqjrsncm2fl6" path="res://assets/x.png" id="1_m81tq"]
 [ext_resource type="Texture2D" uid="uid://r0rjiqcfeil1" path="res://assets/y.png" id="2_f7njl"]
 [ext_resource type="FontFile" uid="uid://dbjfp0emehjwx" path="res://assets/fonts/Winter Wonder.ttf" id="3_u5cq7"]
@@ -256,6 +257,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_f7njl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=533257422]
 layer = -1
@@ -357,3 +359,5 @@ vertical_alignment = 1
 position = Vector2(357, 113)
 scale = Vector2(5.5625, 5.5625)
 texture = ExtResource("8_8p1ro")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=180233366]
