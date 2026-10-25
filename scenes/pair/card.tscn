@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bbj8vc38x848j"]
+
+[ext_resource type="Script" uid="uid://bfk2ll1fe66ws" path="res://scenes/pair/card.gd" id="1_tleo4"]
+
+[node name="Card" type="Node2D" unique_id=1871226419]
+script = ExtResource("1_tleo4")
+
+[node name="Button" type="Button" parent="." unique_id=124477709]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="canvas" type="CanvasLayer" parent="." unique_id=602932238]
+
+[node name="tex" type="TextureRect" parent="canvas" unique_id=451858285]
+offset_right = 40.0
+offset_bottom = 40.0
