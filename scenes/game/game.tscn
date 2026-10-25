@@ -3,7 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://bp5wavej2q27b" path="res://assets/Dungeon tileset/Dungeon tileset.png" id="1_7h61r"]
 [ext_resource type="Texture2D" uid="uid://cyev0p8o206w2" path="res://assets/MiniTileset-Dungeon/Dungeon.png" id="2_0sr1o"]
 [ext_resource type="PackedScene" uid="uid://cim80q8cwlyab" path="res://scenes/players/player_1/player_1.tscn" id="3_0sr1o"]
+[ext_resource type="PackedScene" uid="uid://c0vcfe1ytycmv" path="res://scenes/players/npcs/football.tscn" id="4_87uf6"]
 [ext_resource type="PackedScene" uid="uid://dwmlsmiaqejwj" path="res://scenes/players/player_2/player_2.tscn" id="4_kelw5"]
+[ext_resource type="PackedScene" uid="uid://cwvn73xk3i87u" path="res://scenes/players/npcs/tictactoe.tscn" id="5_2a8rs"]
+[ext_resource type="PackedScene" uid="uid://ba71u2txgprci" path="res://scenes/players/npcs/math.tscn" id="6_4j704"]
+[ext_resource type="PackedScene" uid="uid://duiuad5c3vfjv" path="res://scenes/players/npcs/duck.tscn" id="8_kp23o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kelw5"]
 texture = ExtResource("1_7h61r")
@@ -586,6 +590,22 @@ shape = SubResource("RectangleShape2D_kelw5")
 position = Vector2(189, 122)
 scale = Vector2(3.839996, 3.839996)
 
+[node name="CharacterBody2D4" parent="." unique_id=960779596 instance=ExtResource("4_87uf6")]
+position = Vector2(219, 462)
+scale = Vector2(3.839996, 3.839996)
+
+[node name="CharacterBody2D3" parent="." unique_id=193383448 instance=ExtResource("5_2a8rs")]
+position = Vector2(612, 460.00003)
+scale = Vector2(3.839996, 3.839996)
+
+[node name="CharacterBody2D2" parent="." unique_id=1170686652 instance=ExtResource("6_4j704")]
+position = Vector2(986, 450)
+scale = Vector2(3.839996, 3.839996)
+
 [node name="Player2" parent="." unique_id=1798007415 instance=ExtResource("4_kelw5")]
 position = Vector2(308, 109.00001)
+scale = Vector2(4.3599997, 4.3599997)
+
+[node name="CharacterBody2D" parent="." unique_id=1743809907 instance=ExtResource("8_kp23o")]
+position = Vector2(1039, 136)
 scale = Vector2(4.3599997, 4.3599997)

@@ -5,8 +5,10 @@ const SPEED = 300.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var direction
+@export var interact_action := "interact_1"
 
 func _ready() -> void:
+	add_to_group("player")
 	sprite.animation = "down"
 	sprite.frame = 0
 	sprite.stop()
