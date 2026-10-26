@@ -316,7 +316,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(9.62615e-07, 0.7311441, 0.5533458, 1)
 theme_override_fonts/font = ExtResource("6_rm2d2")
 theme_override_font_sizes/font_size = 48
-text = "Player X wins"
+text = "Congratssss"
 
 [node name="Buttons" type="Control" parent="." unique_id=98917921]
 layout_mode = 1
@@ -377,26 +377,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rm2d2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yasii")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d0l1j")
 text = "Main Menu"
-
-[node name="Exit" type="Button" parent="Buttons" unique_id=528903132]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = 136.0
-offset_right = 77.0
-offset_bottom = 187.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.435117, 1, 0.7377991, 1)
-theme_override_colors/font_pressed_color = Color(0, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.9490196, 0, 0.9490196, 1)
-theme_override_fonts/font = ExtResource("7_d0l1j")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_rm2d2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yasii")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d0l1j")
-text = "Exit"

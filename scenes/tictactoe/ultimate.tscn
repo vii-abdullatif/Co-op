@@ -261,8 +261,7 @@ offset_bottom = 639.0
 scale = Vector2(3, 3)
 texture = ExtResource("3_yt63u")
 
-[node name="score" type="Label" parent="." unique_id=1680298872]
-layout_mode = 0
+[node name="score" type="Label" parent="canvas" unique_id=1680298872]
 offset_left = 985.0
 offset_top = 40.0
 offset_right = 1224.0
@@ -272,8 +271,7 @@ text = "0 VS 0"
 label_settings = SubResource("LabelSettings_yt63u")
 horizontal_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1233551928]
-layout_mode = 0
+[node name="GridContainer" type="GridContainer" parent="canvas" unique_id=1233551928]
 offset_left = 240.0
 offset_top = 60.0
 offset_right = 1040.0
@@ -282,7 +280,7 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="0" type="Button" parent="GridContainer" unique_id=1002838196]
+[node name="0" type="Button" parent="canvas/GridContainer" unique_id=1002838196]
 texture_filter = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -296,7 +294,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_vqpp7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="1" type="Button" parent="GridContainer" unique_id=33758354]
+[node name="1" type="Button" parent="canvas/GridContainer" unique_id=33758354]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -309,7 +307,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_fq6d8")
 icon_alignment = 1
 expand_icon = true
 
-[node name="2" type="Button" parent="GridContainer" unique_id=251904982]
+[node name="2" type="Button" parent="canvas/GridContainer" unique_id=251904982]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -322,7 +320,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_mibt4")
 icon_alignment = 1
 expand_icon = true
 
-[node name="3" type="Button" parent="GridContainer" unique_id=995558155]
+[node name="3" type="Button" parent="canvas/GridContainer" unique_id=995558155]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -335,7 +333,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_re76k")
 icon_alignment = 1
 expand_icon = true
 
-[node name="4" type="Button" parent="GridContainer" unique_id=728064734]
+[node name="4" type="Button" parent="canvas/GridContainer" unique_id=728064734]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -348,7 +346,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_8kr6w")
 icon_alignment = 1
 expand_icon = true
 
-[node name="5" type="Button" parent="GridContainer" unique_id=296185774]
+[node name="5" type="Button" parent="canvas/GridContainer" unique_id=296185774]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -361,7 +359,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_tnlgd")
 icon_alignment = 1
 expand_icon = true
 
-[node name="6" type="Button" parent="GridContainer" unique_id=279326708]
+[node name="6" type="Button" parent="canvas/GridContainer" unique_id=279326708]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -374,7 +372,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_wdhxr")
 icon_alignment = 1
 expand_icon = true
 
-[node name="7" type="Button" parent="GridContainer" unique_id=2114344349]
+[node name="7" type="Button" parent="canvas/GridContainer" unique_id=2114344349]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -387,7 +385,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_uit3v")
 icon_alignment = 1
 expand_icon = true
 
-[node name="8" type="Button" parent="GridContainer" unique_id=1498230855]
+[node name="8" type="Button" parent="canvas/GridContainer" unique_id=1498230855]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3

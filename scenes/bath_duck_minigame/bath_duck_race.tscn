@@ -138,6 +138,7 @@ text = "Player 2 Score :"
 
 [connection signal="area_entered" from="VictoryDetectionArea/PLayerDetection" to="VictoryDetectionArea/PLayerDetection" method="_on_area_entered"]
 [connection signal="pressed" from="BathDucksScreen/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="BathDucksScreen/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]
 
 [editable path="Players/BathingDuck1"]
 [editable path="Players/BathingDuck2"]

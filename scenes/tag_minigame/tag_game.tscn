@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://u0cj7ki0bies"]
 
 [ext_resource type="PackedScene" uid="uid://c141npi5ao4" path="res://scenes/tag_minigame/tag_background.tscn" id="1_2vyem"]
+[ext_resource type="Script" uid="uid://c2cuthoxg2are" path="res://scenes/tag_minigame/tag_game.gd" id="1_4xwkv"]
 [ext_resource type="PackedScene" uid="uid://bhdif6v0povu0" path="res://scenes/tag_minigame/tag_player.tscn" id="2_aegpn"]
+[ext_resource type="PackedScene" uid="uid://c7igppdnlt2as" path="res://scenes/tag_minigame/tag_monester.tscn" id="3_qoh3u"]
+[ext_resource type="Script" uid="uid://cbt84borp07hq" path="res://scenes/tag_minigame/randomizer.gd" id="5_thxdy"]
+[ext_resource type="PackedScene" uid="uid://bw310ouojnmx7" path="res://scenes/tag_minigame/speed_potion.tscn" id="5_to73c"]
+[ext_resource type="PackedScene" uid="uid://bepa6a3vwtq4h" path="res://scenes/tag_minigame/victory_screen.tscn" id="7_est1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onkbk"]
 size = Vector2(1153, 57)
@@ -10,6 +15,7 @@ size = Vector2(1153, 57)
 size = Vector2(28, 667)
 
 [node name="TagGame" type="Node2D" unique_id=1042488162]
+script = ExtResource("1_4xwkv")
 
 [node name="TagBackground" parent="." unique_id=1461633994 instance=ExtResource("1_2vyem")]
 
@@ -100,6 +106,49 @@ position = Vector2(-29, 0)
 position = Vector2(77, 333.5)
 shape = SubResource("RectangleShape2D_2vyem")
 
-[node name="TagPlayer" parent="." unique_id=1045195093 instance=ExtResource("2_aegpn")]
+[node name="TagPlayer" parent="." unique_id=1045195093 groups=["tag_player"] instance=ExtResource("2_aegpn")]
 position = Vector2(215, 149)
 scale = Vector2(3, 3)
+
+[node name="TagMonester" parent="." unique_id=657332868 instance=ExtResource("3_qoh3u")]
+position = Vector2(1084, 490)
+scale = Vector2(4, 4)
+
+[node name="Randomizer" type="Node2D" parent="." unique_id=1240960072]
+script = ExtResource("5_thxdy")
+
+[node name="SpeedPotion" parent="." unique_id=508276428 instance=ExtResource("5_to73c")]
+position = Vector2(826, 105)
+scale = Vector2(3, 3)
+
+[node name="SpeedPotion2" parent="." unique_id=1568215533 instance=ExtResource("5_to73c")]
+position = Vector2(291, 456)
+scale = Vector2(3, 3)
+
+[node name="PotionTimer" type="Timer" parent="." unique_id=1702507906]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="PotionTimer2" type="Timer" parent="." unique_id=64833535]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="VictoryScreen" parent="." unique_id=857037319 instance=ExtResource("7_est1l")]
+process_mode = 3
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[connection signal="area_entered" from="TagPlayer/Area2D" to="TagPlayer" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="TagMonester/Area2D" to="TagMonester" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="TagMonester/AttackingArea" to="TagMonester" method="_on_attacking_area_body_entered"]
+[connection signal="timeout" from="PotionTimer" to="." method="_on_potion_timer_timeout"]
+[connection signal="timeout" from="PotionTimer2" to="." method="_on_potion_timer_2_timeout"]
+[connection signal="pressed" from="VictoryScreen/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VictoryScreen/Buttons/Quit" to="." method="_on_quit_pressed"]
+
+[editable path="TagPlayer"]
+[editable path="TagMonester"]
+[editable path="VictoryScreen"]

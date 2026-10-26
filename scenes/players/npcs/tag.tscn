@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://beseku2f7qiky"]
+
+[ext_resource type="Texture2D" uid="uid://d4djqxki67ep1" path="res://assets/SuperRetroWorld_CharacterPack_Full/SuperRetroWorld_CharacterPack_Full/sprite/character_9-16.png" id="1_50ap3"]
+[ext_resource type="Script" uid="uid://cat5n27thku7u" path="res://scenes/players/npcs/tag_area2d.gd" id="2_if7ih"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if7ih"]
+atlas = ExtResource("1_50ap3")
+region = Rect2(64, 80, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lh30m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if7ih")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50ap3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_if7ih"]
+radius = 27.073973
+
+[node name="Tag" type="CharacterBody2D" unique_id=1177228769]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1120331071]
+sprite_frames = SubResource("SpriteFrames_lh30m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=490422015]
+shape = SubResource("CircleShape2D_50ap3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1017630973]
+script = ExtResource("2_if7ih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=790353747]
+shape = SubResource("CircleShape2D_if7ih")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

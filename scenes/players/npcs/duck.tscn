@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cfwye1mqvdv70" path="res://assets/SuperRetroWorld_CharacterPack_Full/SuperRetroWorld_CharacterPack_Full/sprite/character_17-24.png" id="1_pqkwf"]
 [ext_resource type="Script" uid="uid://85rawknjusou" path="res://scenes/players/npcs/area_2duck.gd" id="2_pqkwf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2mqgs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqkwf"]
 atlas = ExtResource("1_pqkwf")
-region = Rect2(64, 0, 16, 20)
+region = Rect2(112, 80, 16, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2mqgs")
+"texture": SubResource("AtlasTexture_pqkwf")
 }],
 "loop": 1,
 "name": &"default",

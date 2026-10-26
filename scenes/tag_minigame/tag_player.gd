@@ -6,7 +6,7 @@ var speed := 300.0
 var facing_right := true
 
 func _physics_process(_delta: float) -> void:
-	var direction := Input.get_vector("left_1", "right_1", "up_1", "down_1")
+	var direction := Input.get_vector("left_" + str(ViiGlobals.tag_player_ind), "right_" + str(ViiGlobals.tag_player_ind), "up_" + str(ViiGlobals.tag_player_ind), "down_" + str(ViiGlobals.tag_player_ind))
 	velocity = direction * speed
 	if direction.x > 0:
 		facing_right = true
@@ -20,3 +20,8 @@ func _physics_process(_delta: float) -> void:
 		else:
 			animated_sprite_2d.play("idle_left")
 	move_and_slide()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("buff"):
+		speed += 100
+		area.queue_free()

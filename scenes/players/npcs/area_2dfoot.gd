@@ -14,5 +14,5 @@ func _process(_delta: float) -> void:
 	for p in players_inside:
 		if Input.is_action_just_pressed(p.interact_action):
 			print("pressed: ", p.interact_action)
-			get_tree().change_scene_to_file("res://scenes/football_header_minigame/football.tscn")
+			get_tree().change_scene_to_file("res://scenes/football_header_minigame/head_ball_game.tscn")
 			return

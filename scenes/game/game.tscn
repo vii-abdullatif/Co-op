@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cwvn73xk3i87u" path="res://scenes/players/npcs/tictactoe.tscn" id="5_2a8rs"]
 [ext_resource type="PackedScene" uid="uid://ba71u2txgprci" path="res://scenes/players/npcs/math.tscn" id="6_4j704"]
 [ext_resource type="PackedScene" uid="uid://duiuad5c3vfjv" path="res://scenes/players/npcs/duck.tscn" id="8_kp23o"]
+[ext_resource type="PackedScene" uid="uid://bwfn26sv075qm" path="res://scenes/players/npcs/memor.tscn" id="9_2a8rs"]
+[ext_resource type="PackedScene" uid="uid://beseku2f7qiky" path="res://scenes/players/npcs/tag.tscn" id="10_4j704"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kelw5"]
 texture = ExtResource("1_7h61r")
@@ -590,6 +592,10 @@ shape = SubResource("RectangleShape2D_kelw5")
 position = Vector2(189, 122)
 scale = Vector2(3.839996, 3.839996)
 
+[node name="Player2" parent="." unique_id=1798007415 instance=ExtResource("4_kelw5")]
+position = Vector2(308, 109.00001)
+scale = Vector2(4.3599997, 4.3599997)
+
 [node name="CharacterBody2D4" parent="." unique_id=960779596 instance=ExtResource("4_87uf6")]
 position = Vector2(219, 462)
 scale = Vector2(3.839996, 3.839996)
@@ -602,10 +608,14 @@ scale = Vector2(3.839996, 3.839996)
 position = Vector2(986, 450)
 scale = Vector2(3.839996, 3.839996)
 
-[node name="Player2" parent="." unique_id=1798007415 instance=ExtResource("4_kelw5")]
-position = Vector2(308, 109.00001)
-scale = Vector2(4.3599997, 4.3599997)
-
 [node name="CharacterBody2D" parent="." unique_id=1743809907 instance=ExtResource("8_kp23o")]
 position = Vector2(1039, 136)
 scale = Vector2(4.3599997, 4.3599997)
+
+[node name="CharacterBody2D6" parent="." unique_id=1420617033 instance=ExtResource("9_2a8rs")]
+position = Vector2(520.00006, 182.00002)
+scale = Vector2(4.5, 4.5)
+
+[node name="Tag" parent="." unique_id=1177228769 instance=ExtResource("10_4j704")]
+position = Vector2(133, 274)
+scale = Vector2(4, 4)
