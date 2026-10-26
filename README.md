@@ -33,11 +33,23 @@ each player can increment or decrease their answer by up and down controls
 
 ![math](images/math.png)
 
+## Fooooootball
+
+Jump and shoot and score bam !
+
+![football](images/foot.png)
+
+## Tag Game
+
+Dont get caught !!
+
+![tag](images/tag.png)
+
 # Controls
 - Player 1 movement : wasd
-- Player 1 interaction : E
+- Player 1 interaction : E and Space
 - Player 2 movement : arrows
-- Player 2 interaction : Enter
+- Player 2 interaction : Enter and L
 - Pause : Escape
 
 # Setup from source
