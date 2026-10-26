@@ -13,6 +13,35 @@ What beats a classic ? An updated version :P
 
 Enjoy two modes of tictactoe: normal and ULTIMATE (makes you a BIG SHOT)
 
+![normal](images/normal.png)
 
+![ultimate](images/ultimate.png)
 
-# Made with :heart:
+## Memory Pairs
+
+WARNING !!! VERY HARD
+
+Match pairs :P
+
+![memory](images/memory.png)
+## Maths? Who invited bro
+our maths freak wanted it :sob: @AboEl5yr
+
+each player can increment or decrease their answer by up and down controls
+
+![math](images/math.png)
+
+# Controls
+- Player 1 movement : wasd
+- Player 1 interaction : E
+- Player 2 movement : arrows
+- Player 2 interaction : Enter
+- Pause : Escape
+
+# AI-Usage (Hazoro-Claude)
+- Guidance with dimensions bug in ultimate tictactoe
+- Help manage fruit textures loading and randomizing in memory picker
+- Help manage canvas layers ordering
+- Further minor usage
+
+# Made with :heart:, go try it out now !! [here](https://hazoro.itch.io/pairadox)
