@@ -2,6 +2,8 @@
 ## Couch 1v1 game by [Hazoro](https://github.com/hazorox), [Vii](https://github.com/vii-abdullatif), and [AboEl5yr](https://github.com/AdhamMohamedKhairy)
 ### Live on [Itch.io](https://hazoro.itch.io/pairadox)
 
+![main_menu](images/game.png)
+
 # Plot
 You and your rival, your pair, are in a paradox and will have to play together in person :O
 
@@ -38,10 +40,16 @@ each player can increment or decrease their answer by up and down controls
 - Player 2 interaction : Enter
 - Pause : Escape
 
+# Setup from source
+```sh
+git clone https://github.com/vii-abdullatif/Pairadox
+cd Pairadox # And open folder with Godot 4.7
+```
+
 # AI-Usage (Hazoro-Claude)
 - Guidance with dimensions bug in ultimate tictactoe
 - Help manage fruit textures loading and randomizing in memory picker
 - Help manage canvas layers ordering
 - Further minor usage
 
-# Made with :heart:, go try it out now !! [here](https://hazoro.itch.io/pairadox)
+# Made with Luv, go try it out now !! [here](https://hazoro.itch.io/pairadox)
