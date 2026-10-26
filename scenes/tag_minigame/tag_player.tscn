@@ -217,7 +217,7 @@ position = Vector2(0, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ejtco")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=976367876]
+[node name="Area2D" type="Area2D" parent="." unique_id=976367876 groups=["tag_player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=122290490]
 position = Vector2(0, -10)
